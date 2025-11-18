@@ -53,6 +53,35 @@ class Program
 
         Console.WriteLine("\n========== TASK 5 ==========");
 
+        // Task 5: Enum and Record
+        Console.Write("Enter day: ");
+        string day = Console.ReadLine().ToLower();
+
+        DayType type = (day == "friday" || day == "saturday")
+                        ? DayType.Weekend : DayType.Weekday;
+
+        Console.WriteLine("It is: " + type);
+
+        Book b1 = new Book("C# Basics", "ABC", 1000);
+        Book b2 = b1 with { title = "Advanced C#", price = 1300 };
+
+        Console.WriteLine("Book 1: " + b1);
+        var (t, a, p) = b2;
+        Console.WriteLine($"Book 2: {t}, {a}, {p}");
+
+        Console.WriteLine("\n========== TASK 6 ==========");
+        //Task6 is about debugging and check for the percentage calculation
+        Console.Write("Enter marks: ");
+        int.TryParse(Console.ReadLine(), out int marks);
+
+        Console.Write("Enter total: ");
+        int.TryParse(Console.ReadLine(), out int total);
+
+        double percentage = (double)marks / total * 100;
+
+        Console.WriteLine("Percentage = " + percentage);
+
+
 
     }
 }

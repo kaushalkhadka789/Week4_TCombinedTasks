@@ -46,5 +46,13 @@ class Program
 
         Console.WriteLine("\n========== TASK 4 ==========");
 
+        // Task 4: Constructors
+        Player p1 = new Player();   // default
+        Player p2 = new Player("Archer", 5, 100); // parameterized
+        Console.WriteLine($"{p2.playerName}, {p2.level}, {p2.health}");
+
+        Console.WriteLine("\n========== TASK 5 ==========");
+
+
     }
 }
